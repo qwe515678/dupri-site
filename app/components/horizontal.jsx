@@ -61,7 +61,7 @@ const HorizontalScrollCarousel = () => {
       // </div>
       <div className="group relative aspect-square min-min-h-[25vw] min-w-[25vw] border-2 border-[#3a3a3a] rounded-lg p-5 mx-5 flex items-center justify-center cursor-pointer " key={item.number}>
         <div className="rounded-lg absolute top-0 left-0 w-full h-full z-0 overflow-clip ">
-          <Image src={`/bgs/${item.url}`} layout="fill" objectFit="cover" className="blur-sm scale-105 group-hover:scale-110 transition-all duration-500" />
+          <Image src={`/bgs/${item.url}`} alt="" layout="fill" objectFit="cover" className="blur-sm scale-105 group-hover:scale-110 transition-all duration-500" />
         </div>
         <Stat number={item.number} desc={item.text} />
 
