@@ -81,9 +81,9 @@ export default function Home() {
       <section className="  justify-center items-center gap-3 ">
         {/* <Image src={`/times.jpg`} width={1000} height={1000} alt="photo from time journal" className="float-left w-[30%] max-w-xl rounded-sm" /> */}
         <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75"></div>
-          <p >
-            This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
-          </p>
+        <p >
+          This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
+        </p>
 
       </section>
       <section className="w-full flex items-center flex-col">
@@ -122,7 +122,7 @@ export default function Home() {
 
 </svg>
            */}
-           <Image height={75} width={75} src={`/logo.svg`} alt="logo"/>
+          <Image height={75} width={75} src={`/logo.svg`} alt="logo" />
           <p>Dupri Group<br />Providing reliable tech since 1992</p>
         </aside>
         <nav>

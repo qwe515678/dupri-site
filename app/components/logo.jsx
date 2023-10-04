@@ -8,15 +8,15 @@ const logos = [
     },
     {
         path: '/logo-messanger.svg',
-        tooltip:'Dupri Messanger'
+        tooltip: 'Dupri Messanger'
     },
     {
         path: '/logo-music.svg',
-        tooltip:'Dupri Music'
+        tooltip: 'Dupri Music'
     },
     {
-        path:'/logo-store.svg',
-        tooltip:"Dupri Store"
+        path: '/logo-store.svg',
+        tooltip: "Dupri Store"
     },
     {
         path: '/logo-ai.svg',

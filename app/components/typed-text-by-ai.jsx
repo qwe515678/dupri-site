@@ -16,9 +16,9 @@ const TypeItComponent = () => {
         Ask
       </button>
       {isClicked && (
-        <motion.div initial={{scale:0.8, opacity:0}} 
-        animate={{scale:1, opacity:1}}
-        className='mockup-window max-w-2xl mx-auto border-[#373737] bg-[#373737] p-3 w-full'>
+        <motion.div initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className='mockup-window max-w-2xl mx-auto border-[#373737] bg-[#373737] p-3 w-full'>
           <div className=""><span> {">"} </span>What do you think of Dupri Group?</div>
           <span> {">"} </span>
           <TypeIt options={{

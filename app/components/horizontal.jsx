@@ -87,7 +87,7 @@ const Stat = ({ number, desc }) => {
 
       <div className="stat ">
         <div className="stat-title">Over</div>
-        <LinearGradient  gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value">{number}</LinearGradient> 
+        <LinearGradient gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value">{number}</LinearGradient>
         <div className="stat-desc">{desc}</div>
       </div>
 
