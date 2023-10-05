@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="moving min-h-screen flex flex-col items-center justify-center mt-2" id="hero">
         <Logo type='dragable' />
-        <h1 className="text-8xl font-extrabold font-sans text-transparent">DUPRI:</h1>
+        <h1 className=" text-yellow-500 text-9xl font-khan">DUPRI:</h1>
 
         <div className="block text-4xl hero-type font-bold">
           <TypeIt
@@ -80,7 +80,7 @@ export default function Home() {
       <H2 text='WHY SHOULD YOU CHOSE US' />
       <section className="  justify-center items-center gap-3 ">
         {/* <Image src={`/times.jpg`} width={1000} height={1000} alt="photo from time journal" className="float-left w-[30%] max-w-xl rounded-sm" /> */}
-        <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75"></div>
+        <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75 my-3"></div>
         <p >
           This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
         </p>
