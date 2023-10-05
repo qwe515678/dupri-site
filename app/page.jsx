@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="moving min-h-screen flex flex-col items-center justify-center mt-2" id="hero">
         <Logo type='dragable' />
-        <h1 className=" text-yellow-500 text-9xl font-khan">DUPRI:</h1>
+        <h1 className=" text-yellow-500 text-9xl font-khan">DUPRI</h1>
 
         <div className="block text-4xl hero-type font-bold">
           <TypeIt
