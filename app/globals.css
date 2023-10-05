@@ -29,7 +29,7 @@ html::-webkit-scrollbar-thumb {
 
 * {
   font-family: "Poppins", sans-serif;
-  @apply active:border-transparent focus:outline-none;
+  @apply active:border-transparent focus:outline-none ;
 }
 h2 {
   font-family: "Unbounded", sans-serif;
@@ -64,4 +64,7 @@ h1 {
 }
 section {
   @apply border border-[#3a3a3a] rounded mb-4 p-2 bg-[#222222];
+}
+p{
+  @apply text-xl
 }

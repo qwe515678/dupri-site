@@ -72,7 +72,7 @@ export default function Home() {
 
         <div className=" my-3 p-4">
 
-          <p className="text-2xl"><span className="text-3xl">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:</p>
+          <p className=""><span className="">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:</p>
           <Logos />
         </div>
 
