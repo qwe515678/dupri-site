@@ -11,6 +11,7 @@ import AiText from './components/typed-text-by-ai'
 import Logos from './components/logo'
 import H2 from './components/H2'
 import { Toaster } from "react-hot-toast";
+import Acc from './components/acc'
 export default function Home() {
   const data = [
     {
@@ -37,12 +38,13 @@ export default function Home() {
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
     <motion.div className="" layout>
       <Toaster />
-
-      <section className="moving min-h-screen flex flex-col items-center justify-center mt-2" id="hero">
+      {/* Header */}
+     
+      <section className="moving min-h-screen flex flex-col items-center justify-center mt-2 bg-fixed" id="hero">
         <Logo type='dragable' />
         <h1 className=" text-yellow-500 text-9xl font-khan">DUPRI</h1>
 
-        <div className="block text-4xl hero-type font-bold">
+        <div className="block text-4xl hero-type font-bold min-w-[8em] backdrop-blur-md rounded border  border-[#555555] text-center">
           <TypeIt
             options={{
               strings: ['future', 'technology', 'fun', ''],
@@ -93,6 +95,7 @@ export default function Home() {
       </section>
       <H2 text={`Still don't believe us? Here are some numbers:`} />
 
+       
 
 
       <HorizontalScrollCarousel />
@@ -121,7 +124,7 @@ export default function Home() {
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0096321 1061.65V101.347C-0.215267 86.058 3.5011 70.9383 10.8534 57.2284C16.7508 46.614 24.6937 37.0746 34.2955 29.0749C53.3283 13.0039 77.5485 3.106 103.261 0.891173C109.123 0.293154 115.016 -0.00434699 120.913 4.79869e-05H521.517C628.585 4.79869e-05 723.323 18.8295 805.73 56.4883C888.136 94.1471 951.896 147.036 997.009 215.154C1042.12 283.272 1064.68 361.082 1064.68 448.583V711.088C1065.09 760.601 1056.92 809.857 1040.5 857.005C1029.5 887.949 1014.6 917.598 996.106 945.348C950.638 1013.35 885.393 1068.27 807.764 1103.88C806.487 1104.48 805.207 1105.08 803.925 1105.67C745.339 1132.49 682.247 1149.98 617.321 1157.41C585.553 1161.19 553.55 1163.06 521.517 1162.99H120.913C105 1163.14 89.185 1160.68 74.2085 1155.73C59.8127 1150.82 46.5712 1143.41 35.1982 1133.92C23.127 1124.22 13.6412 1112.09 7.47408 1098.47C2.40446 1086.76 -0.131384 1074.25 0.0096321 1061.65ZM241.816 971.93H503.472C573.181 971.93 631.68 962.229 678.97 942.825C701.753 933.638 722.893 921.324 741.669 906.304C775.992 878.189 800.293 841.185 811.389 800.14C818.082 777.222 821.85 752.054 822.692 724.636C822.813 720.674 822.873 716.712 822.872 712.749V445.26C823.098 419.928 820.165 394.654 814.129 369.938C802.186 322.915 778.033 284.888 741.669 255.859C699.093 221.895 640.9 201.284 567.09 194.024C545.956 192 524.72 191.012 503.472 191.063H241.816V971.93Z" fill="black"/>
 
 </svg>
-           */}
+*/}
           <Image height={75} width={75} src={`/logo.svg`} alt="logo" />
           <p>Dupri Group<br />Providing reliable tech since 1992</p>
         </aside>

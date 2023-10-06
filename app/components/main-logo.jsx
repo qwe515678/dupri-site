@@ -14,16 +14,21 @@ function Logo({ type }) {
                 whileHover="active"
                 whileDrag='active'
                 whileTap="compressed"
-
+                dragConstraints={{
+                    top: -150,
+                    left: -150,
+                    right: 150,
+                    bottom: 150,
+                  }}
                 variants={{
                     "compressed": { "scale": .8 },
                     'normal': { "scale": 1 },
                     'active': { "scale": 1.2 }
                 }}
                 drag
-                className=' brightness-200 cursor-pointer z-50'
+                className=' brightness-200 cursor-pointer z-20'
             >
-                <svg width="1060" height="1060" viewBox="0 0 1060 1060" fill="none" xmlns="http://www.w3.org/2000/svg" className=" w-24 h-24 -z-0 duration-500 transition-all">
+                <svg width="1060" height="1060" viewBox="0 0 1060 1060" fill="none" xmlns="http://www.w3.org/2000/svg" className=" w-32 h-32 -z-0 duration-500 transition-all">
                     <path d="M30 362C30 88.598 88.598 30 362 30H698C971.402 30 1030 88.598 1030 362V698C1030 971.402 971.402 1030 698 1030H362C88.598 1030 30 971.402 30 698V362Z" fill="white" stroke="black" stroke-width="60" />
                     <circle cx="449" cy="681" r="268" fill="black" />
                     <path d="M578.5 681C578.5 812.5 550.83 869 447 869C343.17 869 259 784.83 259 681C259 577.17 343.17 493 447 493C550.83 493 578.5 549.5 578.5 681Z" fill="white" />

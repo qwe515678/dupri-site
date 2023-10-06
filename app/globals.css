@@ -40,7 +40,8 @@ h2 {
   color: rgb(0, 255, 98);
 }
 .moving {
-  background-image: url("/bg.svg");
+  /* background-image: url("/bg.svg"); */
+  background-image: url("/Group 50.svg");
   background-repeat: repeat;
   animation: moveBackground 60s linear infinite;
 }

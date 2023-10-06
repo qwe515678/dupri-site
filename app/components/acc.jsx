@@ -40,7 +40,7 @@ function Accordion({ children, multiple, defaultIndex }) {
 }
 
 function AccordionItem({ children }) {
-  return <div className="border-gradient-br-red-purple-gray-900 border-transparent border-solid overflow-hidden mb-2 rounded-lg border border-b-4 border-r-4 active:border transition-all duration-100">{children}</div>;
+  return <div className="AccordionItem">{children}</div>;
 }
 
 function AccordionHeader({ children }) {
@@ -48,7 +48,7 @@ function AccordionHeader({ children }) {
 
   return (
     <motion.div
-      className={`cursor-pointer transition-[background-color] duration-[0.15s] ease-[ease-in-out] p-2 hover:bg-[#3f3f3f] active:bg-[#686868] ${isActive ? "active" : ""}`}
+      className={`AccordionHeader ${isActive ? "active" : ""}`}
       onClick={() => onChangeIndex(index)}
     >
       {children}
@@ -68,27 +68,47 @@ function AccordionPanel({ children }) {
           exit={{ height: 0 }}
           transition={{ type: "spring", duration: 0.4, bounce: 0 }}
         >
-          <div className="p-5">{children}</div>
+          <div className="AccordionPanel">{children}</div>
         </motion.div>
       )}
     </AnimatePresence>
   );
 }
 
-export default function Accordeon({data}) {
+export default function Acc() {
   return (
-    <div className="">
-      <Accordion multiple>
-        {data.map((i) => (
+    <section className="App">
+      <h2>collapsible</h2>
+      <Accordion>
+        {[...Array(2)].map((_, i) => (
           <AccordionItem key={i}>
-            <AccordionHeader>{i.title}</AccordionHeader>
-            {/* <div className="divider"></div>  */}
+            <AccordionHeader>Accordion</AccordionHeader>
             <AccordionPanel>
-              {i.text}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod
+              explicabo, nam sapiente id nostrum ex, ab numquam, doloremque
+              aspernatur quisquam illo! Officiis explicabo laborum incidunt
+              corrupti provident esse eligendi.
             </AccordionPanel>
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+
+      <br />
+
+      <h2>multiple</h2>
+      <Accordion multiple>
+        {[...Array(2)].map((_, i) => (
+          <AccordionItem key={i}>
+            <AccordionHeader>Accordion</AccordionHeader>
+            <AccordionPanel>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod
+              explicabo, nam sapiente id nostrum ex, ab numquam, doloremque
+              aspernatur quisquam illo! Officiis explicabo laborum incidunt
+              corrupti provident esse eligendi.
+            </AccordionPanel>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </section>
   );
 }
