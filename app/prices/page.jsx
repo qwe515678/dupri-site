@@ -53,7 +53,7 @@ export default function Page() {
       </div>
       <ul class="flex flex-col gap-y-1 my-3 border-l-2 p-3 border-[#515252]">
         {item.advantages.map((advantage) => (
-          <li className='flex justify-start items-center gap-2'> <BsCheck className=' stroke-2'/> <span>{advantage}</span></li>
+          <li className='flex justify-start items-center gap-2' key={advantage}> <BsCheck className=' stroke-2'/> <span>{advantage}</span></li>
         ))}
       </ul>
       <Link href={`/`} className='border-gradient-br-red-purple-gray-900 border-transparent border-solid overflow-hidden mb-2 rounded-lg border border-b-4 border-r-4 hover:border-r-2  hover:border-b-2 active:border transition-all duration-100 absolute bottom-0.5 left-0 right-0 text-center m-3 px-2 py-1'>Select</Link>
