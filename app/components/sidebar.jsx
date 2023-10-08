@@ -48,7 +48,7 @@ export default function Sidebar() {
     const [open, cycleOpen] = useCycle(false, true);
 
     return (
-        <main>
+        <main className="">
             <AnimatePresence>
                 {open && (
                     <motion.aside
@@ -86,7 +86,7 @@ export default function Sidebar() {
                     </motion.aside>
                 )}
             </AnimatePresence>
-            <div className=" hidden lg:flex">
+            <div className=" hidden lg:flex ">
                 <button onClick={cycleOpen} className="z-10 btn btn-square bg-transparent border-2"><GiHamburgerMenu className="text-2xl text-center" /></button>
             </div>
         </main>
