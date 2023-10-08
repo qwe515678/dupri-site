@@ -3,10 +3,7 @@
 import { motion } from 'framer-motion'
 import { redirect } from 'next/navigation'
 import { useEffect } from 'react'
-export const metadata = {
-  title: 'Dupri | Contact',
-  description: ''
-}
+
 
 export default function Page() {
   return (
