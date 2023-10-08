@@ -13,7 +13,7 @@ const TypeItComponent = () => {
         className="btn-block border border-gray-600 hover:bg-[#373737] max-w-2xl mx-auto my-2 rounded-xl text-center"
         onClick={() => setIsClicked(true)}
       >
-        Ask
+        Ask DupriAI
       </button>
       {isClicked && (
         <motion.div initial={{ scale: 0.8, opacity: 0 }}

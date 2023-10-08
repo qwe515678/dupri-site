@@ -10,7 +10,10 @@ module.exports = {
       fontFamily: {
         unbounded: "Unbounded",
         poppins: "Poppins",
-        khan: 'Khan'
+        khan: "Khan",
+        mitrMed: "Mitr-medium",
+        mitrReg: "Mitr-regular",
+        mitrsSemi: "Mitr-semi",
       },
     },
     linearBorderGradients: {
@@ -64,6 +67,29 @@ module.exports = {
   },
   plugins: [require("daisyui"), require("tailwindcss-border-gradient-radius")],
   daisyui: {
-    themes: ["dark"],
+    themes: [
+      "dark",
+      {
+        dupri: {
+          primary: "#1ce9c0",
+
+          secondary: "#021117",
+
+          accent: "#1598d1",
+
+          neutral: "#2a323c",
+
+          "base-100": "#1d232a",
+
+          info: "#3abff8",
+
+          success: "#36d399",
+
+          warning: "#fbbd23",
+
+          error: "#f87272",
+        },
+      },
+    ],
   },
 };

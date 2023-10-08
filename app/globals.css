@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "Unbounded";
-  src: url("/unb.woff2");
+  font-family: "Mitr-medium";
+  src: url("/Mitr-Medium.woff2");
+}
+@font-face {
+  font-family: "Mitr-regular";
+  src: url("/Mitr-Regular.woff2");
+}
+@font-face {
+  font-family: "Mitr-semi";
+  src: url("/Mitr-SemiBold.woff2");
 }
 @font-face {
   font-family: "Poppins";
@@ -32,18 +40,14 @@ html::-webkit-scrollbar-thumb {
   @apply active:border-transparent focus:outline-none ;
 }
 h2 {
-  font-family: "Unbounded", sans-serif;
-  @apply text-2xl m-5 uppercase;
+  @apply font-mitrsSemi text-2xl m-5 ;
 }
-::selection {
-  background: #ac3877;
-  color: rgb(0, 255, 98);
-}
+
 .moving {
   /* background-image: url("/bg.svg"); */
   background-image: url("/Group 50.svg");
   background-repeat: repeat;
-  animation: moveBackground 60s linear infinite;
+  animation: moveBackground 100s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -61,11 +65,16 @@ h1 {
 .hero-type {
   background: -webkit-radial-gradient(circle, rgba(70,147,212,1) 0%, rgba(209,142,237,1) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 section {
-  @apply border border-[#3a3a3a] rounded mb-4 p-2 bg-[#222222];
+  @apply border border-[#3a3a3a] rounded mb-4 p-2 bg-[#222222] px-3;
 }
-p{
-  @apply text-xl
+p, div{
+  @apply text-xl font-mitrReg tracking-widest
+}
+p > a{
+  @apply text-blue-800 link link-hover
 }
