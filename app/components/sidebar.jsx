@@ -60,7 +60,7 @@ export default function Sidebar() {
                             width: 0,
                             transition: { delay: 0.4, duration: 0.3 },
                         }}
-                        className="bg-black h-screen absolute right-0 top-0 bottom-0 border border-[#303030] z-20"
+                        className=" bg-[#171717] h-screen absolute right-0 top-0 bottom-0 border border-[#303030] z-20"
                     >
                         <button onClick={cycleOpen} className=" btn btn-square m-3 bg-transparent border-2"><ImCross /></button>
                         <motion.div

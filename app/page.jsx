@@ -15,20 +15,34 @@ import Acc from './components/acc'
 export default function Home() {
   const data = [
     {
-      title: 'What AIs do you have?',
-      text: 'nothing'
+      title: 'What can you offer?',
+      text: `DUPRI has developed many different artificial intelligence-based products, including:
+
+      - An application for generating texts and messages
+      - Chatbots for communicating with clients
+      - A system for automatically writing news articles (DUPRI NEWS)
+      - A neural network that can joke and maintain a witty conversation
+      - Assistant for writing AI-based code
+      - Image recognition and natural language processing algorithms
+      - Recommendation systems for video and music
+      
+      DUPRI is constantly developing new products using advanced artificial intelligence and machine learning models. The company invests in research in this area.`
     },
     {
-      title: 'How can i invest?',
-      text: 'nothing'
+      title: 'How can I invest?',
+      text: 'DUPRI conducted an IPO in 2020 and now their shares are traded on the NASDAQ exchange. To invest in DUPRI, you can buy their shares on the stock exchange or through a broker. It is also possible that DUPRI periodically conducts rounds of attracting investments from venture funds.'
     },
     {
-      title: 'What services do you offer?',
-      text: 'nothing'
+      title: 'What new products is DUPRI planning to release in the near future?',
+      text: `According to the latest statements by DUPRI management, the company plans to introduce several new products based on artificial intelligence in the coming months:
+
+      -DUPRI Home is a virtual assistant for the home that can control connected devices, turn on lights, music, answer questions and perform simple tasks.
+      -DUPRI Drive is an assistant for safe driving based on computer vision, which helps to avoid accidents and monitors the road situation.
+      -DUPRI Docs is a service for intelligent search in corporate documents and databases, can quickly find the necessary information on request.      `
     },
     {
       title: 'What is DUPRI NEWS app?',
-      text: 'DUPRI NEWS app, is one of our main products, the this is that we created the first app, in which posts are written only by AI. (It was really hard to create AI, that can make jokes)ing'
+      text: 'DUPRI NEWS is a mobile application created by DUPRI that uses artificial intelligence to generate news articles and short news bulletins individually for each user based on their interests and preferences. The application automatically analyzes large amounts of information and provides the most important and interesting news in a convenient format.'
     },
 
   ]
@@ -41,7 +55,7 @@ export default function Home() {
       {/* Header */}
       <section className="moving min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
         <Logo type='dragable' />
-        <h1 className=" text-yellow-500 text-9xl font-khan">DUPRI</h1>
+        <h1 className=" text-yellow-500 text-9xl font-mitrsSemi">DUPRI</h1>
 
         <div className="block text-4xl hero-type font-bold min-w-[8em] backdrop-blur-md rounded border  border-[#555555] text-center">
           <TypeIt
@@ -56,7 +70,7 @@ export default function Home() {
               nextStringDelay: 4000,
             }}
             className='z-10'
-            />
+          />
         </div>
         {/* <Logo type='spinning' />
         <Logo type='spinning' />
@@ -69,13 +83,13 @@ export default function Home() {
       {/* about us */}
 
       <H2 text='About Us' />
-      
+
       <section className="flex md:flex-col">
 
         {/* <Sidebar/> */}
         <div className=" my-3 p-4">
 
-          <p className=""><span className="">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:</p>
+          <p className=""><span className=" font-mitrMed">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:</p>
           <Logos />
         </div>
 
@@ -96,7 +110,7 @@ export default function Home() {
       </section>
       <H2 text={`Still don't believe us? Here are some numbers:`} />
 
-       
+
 
 
       <HorizontalScrollCarousel />
@@ -119,7 +133,7 @@ export default function Home() {
       <section>
         <Accordeon data={data} />
       </section>
-      
+
     </motion.div>
   );
 }

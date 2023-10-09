@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
 
           <Sidebar />
           <ul className="flex px-5 py-1 rounded-full gap-5 lg:hidden bg-[#464646]">
-            {links.map((link) => <Link key={link.id} href={`/${link.name.toLocaleLowerCase()}`} className={`hover:bg-[#727272] px-1 rounded-md  text-stone-100 transition-colors duration-300 cursor-pointer`}>{link.name}</Link>)}
+            {links.map((link) => <Link key={link.id} href={`/${link.name.toLocaleLowerCase()}`} className={`hover:bg-[#727272] px-1 rounded-md  text-stone-100 transition-colors duration-300 cursor-pointer hover:text-purple-200`}>{link.name}</Link>)}
 
        
           </ul>

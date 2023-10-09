@@ -50,7 +50,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
   const statList = data.map((item) => {
     return (
-      <div className="group relative aspect-square min-min-h-[25vw] min-w-[25vw] border-2 border-[#3a3a3a] rounded-lg p-5 mx-5 flex items-center justify-center cursor-pointer " key={item.number}>
+      <div className="group relative aspect-square min-h-[45vw] md:min-h-[60vw] sm:min-h-[70vw] xl:max-h-[18vw] min-w-[45vw] md:min-w-[60vw] sm:min-w-[70vw] xl:max-w-[18vw] border-2 border-[#3a3a3a] rounded-lg p-5 mx-5 flex items-center justify-center cursor-pointer " key={item.number}>
         <div className="rounded-lg absolute top-0 left-0 w-full h-full z-0 overflow-clip ">
           <Image src={`/bgs/${item.url}`} alt="" layout="fill" objectFit="cover" className="blur-sm scale-105 group-hover:scale-110 transition-all duration-500" />
         </div>
@@ -74,12 +74,12 @@ const HorizontalScrollCarousel = () => {
 
 const Stat = ({ number, desc }) => {
   return (
-    <div className="stats  z-10 w-fit backdrop-blur-sm bg-[#222222] border border-[#3a3a3a] ">
+    <div className="stats  z-10 w-fit backdrop-blur-sm bg-[#222222] border border-[#3a3a3a]">
 
       <div className="stat ">
         <div className="stat-title text-2xl">Over</div>
         <LinearGradient gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value">{number}</LinearGradient>
-        <p className="stat-desc text-xl">{desc}</p>
+        <p className="stat-desc text-xl whitespace-normal">{desc}</p>
       </div>
 
     </div>
