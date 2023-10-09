@@ -19,7 +19,7 @@ function Logo({ type }) {
                     left: -150,
                     right: 150,
                     bottom: 150,
-                  }}
+                }}
                 variants={{
                     "compressed": { "scale": .8 },
                     'normal': { "scale": 1 },

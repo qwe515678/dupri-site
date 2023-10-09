@@ -75,7 +75,7 @@ function AccordionPanel({ children }) {
   );
 }
 
-export default function Accordeon({data}) {
+export default function Accordeon({ data }) {
   return (
     <div className="">
       <Accordion multiple>

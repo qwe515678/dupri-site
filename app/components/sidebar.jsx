@@ -76,7 +76,7 @@ export default function Sidebar() {
                                     href={`/${name.toLocaleLowerCase()}`}
                                     whileHover={{ scale: 1.1 }}
                                     variants={itemVariants}
-                                    
+
                                     className=" text-white no-underline text-[1.75rem] font-semibold block m-5 hover:text-purple-500 transition-colors duration-300"
                                 >
                                     {name}

@@ -33,12 +33,11 @@ const data = [
 ]
 export default function Page() {
   const [opened, setOpened] = useState(false)
-  console.log("🚀 ~ file: page.jsx:36 ~ Page ~ opened:", opened)
 
   return (
     <div className=" my-16">
       <div className=" h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400 text-stone-800 flex justify-center items-center flex-col gap-10 w-full">
-        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl">Entertainment meets the internet.</h2>
+        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2">Entertainment meets the internet.</h2>
         <p className="w-full p-5">We create technologies that bring people together. </p>
         <svg className="sticky bottom-0 mt-auto w-full" viewBox="0 0 900 228" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path className="w-full" d="M0 49L21.5 44.3C43 39.7 86 30.3 128.8 32.3C171.7 34.3 214.3 47.7 257.2 41.3C300 35 343 9 385.8 9.5C428.7 10 471.3 37 514.2 41.7C557 46.3 600 28.7 642.8 17.8C685.7 6.99999 728.3 2.99999 771.2 1.29999C814 -0.300012 857 0.300012 878.5 0.700012L900 1V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V49Z" fill="#A09BFB" />
@@ -51,40 +50,40 @@ export default function Page() {
       <section className=" border-none rounded-t-none">
 
         <h2>About Us</h2>
-        <p>DUPRI is one of the most famous and successful companies in the field of artificial intelligence and automation. Founded in 2010 by a group of graduates from Russia, over the past decade DUPRI has grown into a major player in the global technology market.
+        <p>DUPRI is a leading AI/automation company founded in 2010 by Russian graduates. Over the past decade, it has grown into a major global tech player. DUPRI's products help automate tasks, generate content, communicate with customers, and more using innovative AI and talented developers.
 
           {opened ? (
             <span className="ml-1">DUPRI products help automate everyday tasks, generate useful content, maintain communication with customers, and much more.
 
-              Thanks to an innovative approach and a talented team of developers, DUPRI managed to achieve impressive results in the field of artificial intelligence in a relatively short time. Today, millions of people around the world use DUPRI technologies in their daily lives. The company specializes in creating services and applications based on advanced neural networks and machine learning algorithms. </span>
+              The company specializes in services and apps using advanced neural networks and ML algorithms. Millions worldwide now use DUPRI's AI technologies daily. </span>
           ) : (
             <button className=" text-blue-600 ml-1" onClick={() => setOpened(true)}> More</button>
           )}
         </p>
 
       </section>
-      
-        <div className=" m-4">
-          <div className=" border-l-2 border-gray-200 pl-4">
 
-            {data.map((event, index) => (
+      <div className=" m-4">
+        <div className=" border-l-2 border-gray-200 pl-4">
 
-              <div key={index} className=" flex mb-4">
+          {data.map((event, index) => (
+
+            <div key={index} className=" flex mb-4">
 
 
 
-                <div className="timeline-content ">
-                  <p className="font-bold text-blue-700">{event.year}</p>
-                  <p className="text-gray-400">{event.event}</p>
-                </div>
-
+              <div className="timeline-content ">
+                <p className="font-bold text-blue-700">{event.year}</p>
+                <p className="text-gray-400">{event.event}</p>
               </div>
 
-            ))}
+            </div>
 
-          </div>
+          ))}
+
         </div>
-      
+      </div>
+
     </div>
   )
 }

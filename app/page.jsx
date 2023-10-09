@@ -16,33 +16,33 @@ export default function Home() {
   const data = [
     {
       title: 'What can you offer?',
-      text: `DUPRI has developed many different artificial intelligence-based products, including:
+      text: `DUPRI has developed many AI products including:
 
-      - An application for generating texts and messages
-      - Chatbots for communicating with clients
-      - A system for automatically writing news articles (DUPRI NEWS)
-      - A neural network that can joke and maintain a witty conversation
-      - Assistant for writing AI-based code
-      - Image recognition and natural language processing algorithms
-      - Recommendation systems for video and music
+      - App for generating texts 
+      - Chatbots 
+      - News writing system
+      - Witty conversational AI
+      - AI coding assistant
+      - Image and language models
+      - Recommendation systems
       
-      DUPRI is constantly developing new products using advanced artificial intelligence and machine learning models. The company invests in research in this area.`
+      DUPRI constantly develops new AI/ML products and invests in research.`
     },
     {
       title: 'How can I invest?',
-      text: 'DUPRI conducted an IPO in 2020 and now their shares are traded on the NASDAQ exchange. To invest in DUPRI, you can buy their shares on the stock exchange or through a broker. It is also possible that DUPRI periodically conducts rounds of attracting investments from venture funds.'
+      text: 'DUPRI went public in 2020 and trades on NASDAQ. You can invest by buying shares on the exchange or via a broker. DUPRI may also periodically raise funds from venture capital.'
     },
     {
       title: 'What new products is DUPRI planning to release in the near future?',
-      text: `According to the latest statements by DUPRI management, the company plans to introduce several new products based on artificial intelligence in the coming months:
+      text: `DUPRI plans to launch new AI products:
 
-      -DUPRI Home is a virtual assistant for the home that can control connected devices, turn on lights, music, answer questions and perform simple tasks.
-      -DUPRI Drive is an assistant for safe driving based on computer vision, which helps to avoid accidents and monitors the road situation.
-      -DUPRI Docs is a service for intelligent search in corporate documents and databases, can quickly find the necessary information on request.      `
+      - DUPRI Home: a virtual home assistant to control devices, lights, music and answer questions.
+      - DUPRI Drive: a driving assistant using computer vision to help avoid accidents and monitor the road.
+      - DUPRI Docs: an intelligent search service for corporate docs and databases to quickly find information.`
     },
     {
       title: 'What is DUPRI NEWS app?',
-      text: 'DUPRI NEWS is a mobile application created by DUPRI that uses artificial intelligence to generate news articles and short news bulletins individually for each user based on their interests and preferences. The application automatically analyzes large amounts of information and provides the most important and interesting news in a convenient format.'
+      text: 'DUPRI NEWS is a mobile app by DUPRI that uses AI to generate personalized news articles and bulletins based on user interests and preferences. It analyzes information and provides the most important and interesting news conveniently.'
     },
 
   ]
@@ -55,7 +55,7 @@ export default function Home() {
       {/* Header */}
       <section className="moving min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
         <Logo type='dragable' />
-        <h1 className=" text-yellow-500 text-9xl font-mitrsSemi">DUPRI</h1>
+        <h1 className=" text-yellow-500 text-9xl xs:text-8xl font-mitrsSemi">DUPRI</h1>
 
         <div className="block text-4xl hero-type font-bold min-w-[8em] backdrop-blur-md rounded border  border-[#555555] text-center">
           <TypeIt

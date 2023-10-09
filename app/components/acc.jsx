@@ -6,9 +6,9 @@ function Card({ title, price, features }) {
   return (
     <div className="bg-gray-800 text-gray-100 p-6 rounded-lg">
       <h2 className="text-xl font-medium">{title}</h2>
-      
+
       <p className="text-3xl font-bold">{price}</p>
-      
+
       <ul className="space-y-2">
         {features.map(feature => (
           <li key={feature} className="flex items-center">
@@ -18,8 +18,8 @@ function Card({ title, price, features }) {
         ))}
       </ul>
 
-      <a 
-        href="#" 
+      <a
+        href="#"
         className="bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium mt-4 inline-block"
       >
         Get Started
@@ -40,31 +40,31 @@ function App() {
       <div className="relative">
 
         <div className="absolute inset-0 pointer-events-none z-10" style={{
-          maskImage: `radial-gradient(50rem 50rem at ${activeCard?.x ?? 0}px ${activeCard?.y ?? 0}px, #000 1%, transparent 50%)` 
+          maskImage: `radial-gradient(50rem 50rem at ${activeCard?.x ?? 0}px ${activeCard?.y ?? 0}px, #000 1%, transparent 50%)`
         }}>
         </div>
 
         <div className="grid gap-6">
-          
+
           <Card
-            onMouseMove={e => setActiveCard(card => ({...card, x: e.pageX, y: e.pageY}))}
+            onMouseMove={e => setActiveCard(card => ({ ...card, x: e.pageX, y: e.pageY }))}
             title="Basic"
             price="$9.99"
             features={['Access to standard workouts', 'Email support']}
           />
 
           <Card
-            onMouseMove={e => setActiveCard(card => ({...card, x: e.pageX, y: e.pageY}))}  
+            onMouseMove={e => setActiveCard(card => ({ ...card, x: e.pageX, y: e.pageY }))}
             title="Pro"
             price="$19.99"
             features={['Access to advanced workouts', 'Email support', 'Live Q&A access']}
           />
-        
+
           <Card
-            onMouseMove={e => setActiveCard(card => ({...card, x: e.pageX, y: e.pageY}))}
+            onMouseMove={e => setActiveCard(card => ({ ...card, x: e.pageX, y: e.pageY }))}
             title="Ultimate"
             price="$29.99"
-            features={['Access to premium workouts', '24/7 support', '1-on-1 coaching', 'Early access']}  
+            features={['Access to premium workouts', '24/7 support', '1-on-1 coaching', 'Early access']}
           />
 
         </div>

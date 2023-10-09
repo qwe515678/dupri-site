@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
           <ul className="flex px-5 py-1 rounded-full gap-5 lg:hidden bg-[#464646]">
             {links.map((link) => <Link key={link.id} href={`/${link.name.toLocaleLowerCase()}`} className={`hover:bg-[#727272] px-1 rounded-md  text-stone-100 transition-colors duration-300 cursor-pointer hover:text-purple-200`}>{link.name}</Link>)}
 
-       
+
           </ul>
 
         </div>
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         </div>
         <footer className="footer p-10  text-base-content border-t border-gray-600">
           <aside>
-    
+
             <Image height={75} width={75} src={`/logo.svg`} alt="logo" />
             <p>Dupri Group<br />Providing reliable tech since 1992</p>
           </aside>

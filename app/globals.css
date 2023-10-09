@@ -37,10 +37,10 @@ html::-webkit-scrollbar-thumb {
 
 * {
   font-family: "Poppins", sans-serif;
-  @apply active:border-transparent focus:outline-none ;
+  @apply active:border-transparent focus:outline-none;
 }
 h2 {
-  @apply font-mitrsSemi text-2xl m-5 ;
+  @apply font-mitrsSemi text-2xl m-5;
 }
 
 .moving {
@@ -63,7 +63,11 @@ h1 {
   -webkit-text-stroke: 4px black;
 }
 .hero-type {
-  background: -webkit-radial-gradient(circle, rgba(70,147,212,1) 0%, rgba(209,142,237,1) 100%);
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(70, 147, 212, 1) 0%,
+    rgba(209, 142, 237, 1) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,9 +76,10 @@ h1 {
 section {
   @apply border border-[#3a3a3a] rounded mb-4 p-2 bg-[#222222] px-3;
 }
-p, div{
-  @apply text-xl font-mitrReg tracking-widest
+p,
+div {
+  @apply text-xl font-mitrReg tracking-widest;
 }
-p > a{
-  @apply text-blue-800 link link-hover
+p > a {
+  @apply text-blue-800 link link-hover;
 }
