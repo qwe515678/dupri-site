@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, delay, motion, useCycle } from "framer-motion";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { ImCross } from 'react-icons/im'
 const links = [
@@ -55,6 +55,10 @@ export default function Sidebar() {
                         initial={{ width: 0 }}
                         animate={{
                             width: 300,
+                            transition: {
+                                delay: 0.1,
+                                type: "spring"
+                            }
                         }}
                         exit={{
                             width: 0,
@@ -73,7 +77,7 @@ export default function Sidebar() {
                             {links.map(({ name, id }) => (
                                 <motion.a
                                     key={id}
-                                    href={`/${name.toLocaleLowerCase()}`}
+                                    href={name != 'Home' ? `/${name.toLocaleLowerCase()}` : '/'}
                                     whileHover={{ scale: 1.1 }}
                                     variants={itemVariants}
 

@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        unbounded: "Unbounded",
         poppins: "Poppins",
         khan: "Khan",
         mitrMed: "Mitr-medium",
         mitrReg: "Mitr-regular",
         mitrsSemi: "Mitr-semi",
+        grid: "Grid",
       },
     },
     linearBorderGradients: {

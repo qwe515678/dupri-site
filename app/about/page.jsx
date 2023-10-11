@@ -1,6 +1,7 @@
 
 'use client'
 
+import { motion } from "framer-motion"
 import { useState } from "react"
 
 
@@ -35,7 +36,7 @@ export default function Page() {
   const [opened, setOpened] = useState(false)
 
   return (
-    <div className=" my-16">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className=" my-16">
       <div className=" h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400 text-stone-800 flex justify-center items-center flex-col gap-10 w-full">
         <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2">Entertainment meets the internet.</h2>
         <p className="w-full p-5">We create technologies that bring people together. </p>
@@ -72,10 +73,10 @@ export default function Page() {
 
 
 
-              <div className="timeline-content ">
+              <motion.div className="timeline-content" initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ type: 'spring' }} viewport={{ once: true }}>
                 <p className="font-bold text-blue-700">{event.year}</p>
                 <p className="text-gray-400">{event.event}</p>
-              </div>
+              </motion.div>
 
             </div>
 
@@ -84,6 +85,6 @@ export default function Page() {
         </div>
       </div>
 
-    </div>
+    </motion.div>
   )
 }

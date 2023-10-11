@@ -40,7 +40,7 @@ function Accordion({ children, multiple, defaultIndex }) {
 }
 
 function AccordionItem({ children }) {
-  return <div className="border-gradient-br-red-purple-gray-900 border-transparent border-solid overflow-hidden mb-2 rounded-lg border border-b-4 border-r-4 active:border transition-all duration-100">{children}</div>;
+  return <motion.div initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ type: 'spring' }} viewport={{ once: true }} className="border-gradient-br-red-purple-gray-900 border-transparent border-solid overflow-hidden mb-2 rounded-lg border border-b-4 border-r-4 active:border transition-all duration-100">{children}</motion.div>;
 }
 
 function AccordionHeader({ children }) {
@@ -63,10 +63,11 @@ function AccordionPanel({ children }) {
     <AnimatePresence initial={false}>
       {isActive && (
         <motion.div
-          initial={{ height: 0 }}
-          animate={{ height: "auto" }}
-          exit={{ height: 0 }}
-          transition={{ type: "spring", duration: 0.4, bounce: 0 }}
+          initial={{ height: 0, opacity: 0 }}
+          whileInView={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", duration: 0.4, bounce: 0.3 }}
         >
           <div className="p-5">{children}</div>
         </motion.div>
@@ -82,7 +83,7 @@ export default function Accordeon({ data }) {
         {data.map((i) => (
           <AccordionItem key={i}>
             <AccordionHeader>{i.title}</AccordionHeader>
-            {/* <div className="divider"></div>  */}
+            <div className="divider  mx-3 my-1"></div>
             <AccordionPanel>
               {i.text}
             </AccordionPanel>

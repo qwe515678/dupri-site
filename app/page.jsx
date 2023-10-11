@@ -1,17 +1,15 @@
 "use client";
-import Image from "next/image";
+
 import HorizontalScrollCarousel from './components/horizontal'
 import { BsArrowRightSquare } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import Accordeon from "./components/accordeon";
 import TypeIt from "typeit-react";
-import { BsQuestionCircleFill } from 'react-icons/bs'
 import Logo from './components/main-logo'
 import AiText from './components/typed-text-by-ai'
 import Logos from './components/logo'
 import H2 from './components/H2'
 import { Toaster } from "react-hot-toast";
-import Acc from './components/acc'
 export default function Home() {
   const data = [
     {
@@ -50,7 +48,7 @@ export default function Home() {
   return (
     // hero
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
-    <motion.div className="" layout>
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
       <Toaster />
       {/* Header */}
       <section className="moving min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">

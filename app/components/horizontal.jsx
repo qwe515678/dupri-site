@@ -1,5 +1,5 @@
 'use client'
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { LinearGradient } from 'react-text-gradients'
 import Image from "next/image";
@@ -43,14 +43,20 @@ const data = [
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+  const temporaryx = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 40,
+    restDelta: 0.001,
+  });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(temporaryx, [0, 1], ["1%", "-98%"]);
   const statList = data.map((item) => {
     return (
-      <div className="group relative aspect-square min-h-[45vw] md:min-h-[60vw] sm:min-h-[70vw] xl:max-h-[18vw] min-w-[45vw] md:min-w-[60vw] sm:min-w-[70vw] xl:max-w-[18vw] border-2 border-[#3a3a3a] rounded-lg p-5 mx-5 flex items-center justify-center cursor-pointer " key={item.number}>
+      <div className="group relative aspect-square w-[20vw] xl:w-[30vw] lg:w-[40vw] md:w-[50vw] sm:w-[60vw] xs:w-[70vw] border-2 border-[#3a3a3a] rounded-lg p-5 mx-5 flex items-center justify-center cursor-pointer " key={item.number}>
         <div className="rounded-lg absolute top-0 left-0 w-full h-full z-0 overflow-clip ">
           <Image src={`/bgs/${item.url}`} alt="" layout="fill" objectFit="cover" className="blur-sm scale-105 group-hover:scale-110 transition-all duration-500" />
         </div>
@@ -64,7 +70,7 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-800 ">
 
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20">
+        <motion.div style={{ x }} className="flex gap-20" >
           {statList}
         </motion.div>
       </div>
@@ -78,7 +84,7 @@ const Stat = ({ number, desc }) => {
 
       <div className="stat ">
         <div className="stat-title text-2xl">Over</div>
-        <LinearGradient gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value">{number}</LinearGradient>
+        <LinearGradient gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value font-mono">{number}</LinearGradient>
         <p className="stat-desc text-xl whitespace-normal">{desc}</p>
       </div>
 

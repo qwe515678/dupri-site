@@ -18,8 +18,8 @@
   src: url("/pop.woff2");
 }
 @font-face {
-  font-family: "Khan";
-  src: url("/khan.woff2");
+  font-family: "Grid";
+  src: url("/Gridular-Regular.woff2");
 }
 html {
   scroll-behavior: smooth; /* make sure the scroll is always in sync with the user's position */
@@ -37,7 +37,6 @@ html::-webkit-scrollbar-thumb {
 
 * {
   font-family: "Poppins", sans-serif;
-  @apply active:border-transparent focus:outline-none;
 }
 h2 {
   @apply font-mitrsSemi text-2xl m-5;
