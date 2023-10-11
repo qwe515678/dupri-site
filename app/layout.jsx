@@ -1,10 +1,9 @@
-'use client'
+
 import "./globals.css";
 import Link from "next/link";
 
 import Sidebar from './components/sidebar'
 import Image from "next/image";
-import { motion } from "framer-motion";
 export const metadata = {
   title: "Dupri | Home",
   description: "Homepage of Dupri Group",
