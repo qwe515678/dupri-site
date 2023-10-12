@@ -9,8 +9,11 @@ import Logo from './components/main-logo'
 import AiText from './components/typed-text-by-ai'
 import Logos from './components/logo'
 import H2 from './components/H2'
+
 import { Toaster } from "react-hot-toast";
+import AnimatedText from './components/animatedchar';
 export default function Home() {
+  
   const data = [
     {
       title: 'What can you offer?',
@@ -49,9 +52,11 @@ export default function Home() {
     // hero
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+
       <Toaster />
       {/* Header */}
       <section className="moving min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
+        
         <Logo type='dragable' />
         <h1 className=" text-yellow-500 text-9xl xs:text-8xl font-mitrsSemi">DUPRI</h1>
 
@@ -80,7 +85,7 @@ export default function Home() {
       </section>
       {/* about us */}
 
-      <H2 text='About Us' />
+      <H2 h2Text='About Us' />
 
       <section className="flex md:flex-col">
 
@@ -92,7 +97,7 @@ export default function Home() {
         </div>
 
       </section>
-      <H2 text='WHY SHOULD YOU CHOSE US' />
+      <H2 h2Text='WHY SHOULD YOU CHOSE US' />
       <section className="  justify-center items-center gap-3 ">
         {/* <Image src={`/times.jpg`} width={1000} height={1000} alt="photo from time journal" className="float-left w-[30%] max-w-xl rounded-sm" /> */}
         <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75 my-3"></div>
@@ -102,11 +107,11 @@ export default function Home() {
 
       </section>
       <section className="w-full flex items-center flex-col">
-        <H2 text='WHY SHOULD YOU CHOSE US' />
+        <H2 h2Text='WHY SHOULD YOU CHOSE US' />
         <AiText />
 
       </section>
-      <H2 text={`Still don't believe us? Here are some numbers:`} />
+      <H2 h2Text={`Still don't believe us? Here are some numbers:`} />
 
 
 
@@ -127,7 +132,7 @@ export default function Home() {
       </section>
       {/* q&a */}
 
-      <H2 text='Still have questions?' />
+      <H2 h2Text='Still have questions?' />
       <section>
         <Accordeon data={data} />
       </section>

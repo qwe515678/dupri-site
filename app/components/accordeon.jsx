@@ -83,7 +83,6 @@ export default function Accordeon({ data }) {
         {data.map((i) => (
           <AccordionItem key={i}>
             <AccordionHeader>{i.title}</AccordionHeader>
-            <div className="divider  mx-3 my-1"></div>
             <AccordionPanel>
               {i.text}
             </AccordionPanel>
