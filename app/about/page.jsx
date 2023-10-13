@@ -1,10 +1,9 @@
 
 'use client'
 
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { useState } from "react"
-
-
+import H2 from '../components/H2'
 
 const data = [
   {
@@ -34,23 +33,30 @@ const data = [
 ]
 export default function Page() {
   const [opened, setOpened] = useState(false)
-
+  const { scrollY } = useScroll()
+  const waveScroll = useTransform(scrollY, [0, 200], [0,300])
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className=" my-16">
-      <div className=" h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400 text-stone-800 flex justify-center items-center flex-col gap-10 w-full">
-        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2">Entertainment meets the internet.</h2>
-        <p className="w-full p-5">We create technologies that bring people together. </p>
-        <svg className="sticky bottom-0 mt-auto w-full" viewBox="0 0 900 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path className="w-full" d="M0 49L21.5 44.3C43 39.7 86 30.3 128.8 32.3C171.7 34.3 214.3 47.7 257.2 41.3C300 35 343 9 385.8 9.5C428.7 10 471.3 37 514.2 41.7C557 46.3 600 28.7 642.8 17.8C685.7 6.99999 728.3 2.99999 771.2 1.29999C814 -0.300012 857 0.300012 878.5 0.700012L900 1V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V49Z" fill="#A09BFB" />
-          <path className="w-full" d="M0 65L21.5 66.8C43 68.7 86 72.3 128.8 70.2C171.7 68 214.3 60 257.2 60.8C300 61.7 343 71.3 385.8 67.2C428.7 63 471.3 45 514.2 42.3C557 39.7 600 52.3 642.8 65.5C685.7 78.7 728.3 92.3 771.2 87.8C814 83.3 857 60.7 878.5 49.3L900 38V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V65Z" fill="#7F7ABF" />
-          <path className="w-full" d="M0 83.9998L21.5 90.7998C43 97.6998 86 111.3 128.8 114.2C171.7 117 214.3 109 257.2 103.8C300 98.6998 343 96.2998 385.8 90.2998C428.7 84.2998 471.3 74.6998 514.2 73.2998C557 71.9998 600 78.9998 642.8 81.9998C685.7 84.9998 728.3 83.9998 771.2 84.7998C814 85.6998 857 88.2999 878.5 89.6999L900 90.9998V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V83.9998Z" fill="#5F5B86" />
-          <path className="w-full" d="M0 125L21.5 125.2C43 125.3 86 125.7 128.8 131.5C171.7 137.3 214.3 148.7 257.2 146.2C300 143.7 343 127.3 385.8 127.5C428.7 127.7 471.3 144.3 514.2 147.7C557 151 600 141 642.8 142.3C685.7 143.7 728.3 156.3 771.2 154.2C814 152 857 135 878.5 126.5L900 118V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V125Z" fill="#403D51" />
-          <path className="w-full" d="M0 174L21.5 177.2C43 180.3 86 186.7 128.8 186.2C171.7 185.7 214.3 178.3 257.2 175.3C300 172.3 343 173.7 385.8 171.5C428.7 169.3 471.3 163.7 514.2 160C557 156.3 600 154.7 642.8 153.5C685.7 152.3 728.3 151.7 771.2 157.7C814 163.7 857 176.3 878.5 182.7L900 189V228H878.5C857 228 814 228 771.2 228C728.3 228 685.7 228 642.8 228C600 228 557 228 514.2 228C471.3 228 428.7 228 385.8 228C343 228 300 228 257.2 228C214.3 228 171.7 228 128.8 228C86 228 43 228 21.5 228H0V174Z" fill="#222222" />
-        </svg>
+
+      <div style={{y:waveScroll}} className="moving bg-about h-screen text-stone-800 flex justify-center items-center flex-col gap-10 w-full">
+        {/* <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2  bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400 bg-clip-text text-transparent">Entertainment meets the internet.</h2> */}
+        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2 text-slate-300">Entertainment meets the internet.</h2>
+        <p className="w-full p-5 text-slate-300 z-10 ">We create technologies that bring people together. </p>
+
       </div>
+        <motion.svg  className="sticky bottom-0 mt-auto w-full h-fit z-0" width="900" height="226" viewBox="0 0 900 226" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path className="w-full" d="M0 49H50V77H100V21H150V83H200V37H250V0H300V32H350V92H400V68H450V49H500V26H550V68H600V41H650V43H700V23H750V110H800V80H850V53H900V34V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V49Z" fill="#00FF00" />
+          <path className="w-full" d="M0 81H50V56H100V37H150V100H200V98H250V107H300V67H350V84H400V97H450V112H500V59H550V124H600V71H650V97H700V68H750V66H800V47H850V55H900V78V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V81Z" fill="#25DA19" />
+          <path className="w-full" d="M0 59H50V73H100V111H150V89H200V141H250V50H300V96H350V114H400V125H450V73H500V133H550V111H600V66H650V70H700V91H750V90H800V81H850V123H900V143V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V59Z" fill="#2FB621" />
+          <path className="w-full" d="M0 90H50V76H100V147H150V140H200V117H250V139H300V96H350V138H400V118H450V116H500V121H550V127H600V141H650V129H700V79H750V150H800V91H850V96H900V156V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V90Z" fill="#329425" />
+          <path className="w-full" d="M0 160H50V132H100V151H150V175H200V170H250V174H300V167H350V130H400V120H450V159H500V110H550V135H600V164H650V172H700V122H750V120H800V133H850V157H900V163V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V160Z" fill="#317325" />
+          <path className="w-full" d="M0 188H50V137H100V188H150V158H200V140H250V160H300V169H350V134H400V149H450V128H500V126H550V165H600V186H650V134H700V156H750V145H800V180H850V182H900V162V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V188Z" fill="#2C5323" />
+          <path className="w-full" d="M0 200H50V197H100V167H150H200V180H250V160H300V152H350V158H400V198H450V186H500V183H550V157H600V200H650V183H700V184H750V179H800V168H850V158H900V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V200Z" fill="#24351F" />
+          <path className="w-full" d="M0 201H50V212H100V202H150V191H200V196H250V188H300V199H350V211H400V202H450V191H500V214H550V201H600V216H650V218H700V196H750V188H800V200H850V187H900V210V226H850H800H750H700H650H600H550H500H450H400H350H300H250H200H150H100H50H0V201Z" fill="#222222" />
+        </motion.svg>
       <section className=" border-none rounded-t-none">
 
-        <h2>About Us</h2>
+        <H2 h2Text={`About us`}></H2>
         <p>DUPRI is a leading AI/automation company founded in 2010 by Russian graduates. Over the past decade, it has grown into a major global tech player. DUPRI's products help automate tasks, generate content, communicate with customers, and more using innovative AI and talented developers.
 
           {opened ? (
@@ -60,6 +66,7 @@ export default function Page() {
           ) : (
             <button className=" text-blue-600 ml-1" onClick={() => setOpened(true)}> More</button>
           )}
+         
         </p>
 
       </section>

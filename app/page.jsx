@@ -55,7 +55,7 @@ export default function Home() {
 
       <Toaster />
       {/* Header */}
-      <section className="moving min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
+      <section className="moving bg-main min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
         
         <Logo type='dragable' />
         <h1 className=" text-yellow-500 text-9xl xs:text-8xl font-mitrsSemi">DUPRI</h1>

@@ -44,11 +44,19 @@ h2 {
 
 .moving {
   /* background-image: url("/bg.svg"); */
-  background-image: url("/Group 50.svg");
+  
   background-repeat: repeat;
   animation: moveBackground 100s linear infinite;
 }
-
+.bg-main{
+  background-image: url("/Group 50.svg");
+}
+.bg-about{
+  background-image:url('/aboutbg.svg');
+}
+.bg-prices{
+  background-image:url('/bg-prices.svg');
+}
 @keyframes moveBackground {
   from {
     background-position: 0 0;

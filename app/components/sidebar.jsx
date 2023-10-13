@@ -57,12 +57,12 @@ export default function Sidebar() {
                             width: 300,
                             transition: {
                                 delay: 0.1,
-                                type: "spring"
+                                type:'spring'
                             }
                         }}
                         exit={{
                             width: 0,
-                            transition: { delay: 0.4, duration: 0.3 },
+                            transition: { delay: 0.2, duration: 0.3, ease: 'easeInOut' },
                         }}
                         className=" bg-[#171717] h-screen absolute right-0 top-0 bottom-0 border border-[#303030] z-20"
                     >
