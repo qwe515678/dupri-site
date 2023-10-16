@@ -88,5 +88,5 @@ div {
   @apply text-xl font-mitrReg tracking-widest;
 }
 p > a {
-  @apply text-blue-800 link link-hover;
+  @apply text-blue-800 ;
 }

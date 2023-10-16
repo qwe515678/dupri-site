@@ -9,11 +9,9 @@ import Logo from './components/main-logo'
 import AiText from './components/typed-text-by-ai'
 import Logos from './components/logo'
 import H2 from './components/H2'
-
-import { Toaster } from "react-hot-toast";
+import { Link, Button } from "@nextui-org/react";
 import AnimatedText from './components/animatedchar';
 export default function Home() {
-  
   const data = [
     {
       title: 'What can you offer?',
@@ -53,14 +51,13 @@ export default function Home() {
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
 
-      <Toaster />
-      {/* Header */}
+    {/* Header */}
       <section className="moving bg-main min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
-        
+
         <Logo type='dragable' />
         <h1 className=" text-yellow-500 text-9xl xs:text-8xl font-mitrsSemi">DUPRI</h1>
 
-        <div className="block text-4xl hero-type font-bold min-w-[8em] backdrop-blur-md rounded border  border-[#555555] text-center">
+        <div className=" text-4xl bg-clip-text bg-gradient-to-r from-primary to-accent text-transparent font-bold min-w-[8em] backdrop-blur-md rounded border  border-[#555555] text-center">
           <TypeIt
             options={{
               strings: ['future', 'technology', 'fun', ''],
@@ -75,12 +72,6 @@ export default function Home() {
             className='z-10'
           />
         </div>
-        {/* <Logo type='spinning' />
-        <Logo type='spinning' />
-        <Logo type='spinning' />
-      <Logo type='spinning' /> */}
-        {/* <Logo type='spinning' />
-        <Logo type='spinning' /> */}
 
       </section>
       {/* about us */}
@@ -127,8 +118,15 @@ export default function Home() {
         {/* <div className="divider">OR</div> */}
 
         <p>Check out our new web app, all posts there are written only by a neural network, this is the first neural network of this kind in the world</p>
-        <a href="https://www.dupri.ru" className="flex pl-1 py-2 pr-5 rounded-md items-center justify-center gap-3 bg-green-700 group hover:bg-green-600 ">Go there <BsArrowRightSquare className="group-hover:translate-x-2 duration-300 transition-all" /></a>
-
+        <Button
+          href="https://dupri.ru"
+          as={Link}
+          showAnchorIcon
+          variant="solid"
+          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent'
+        >
+          Visit Dupri News
+        </Button>
       </section>
       {/* q&a */}
 

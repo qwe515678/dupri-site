@@ -1,9 +1,11 @@
-const colors = require("tailwindcss/colors");
+const { nextui } = require("@nextui-org/react");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -65,31 +67,27 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
   },
-  plugins: [require("daisyui"), require("tailwindcss-border-gradient-radius")],
-  daisyui: {
-    themes: [
-      "dark",
-      {
-        dupri: {
-          primary: "#1ce9c0",
-
-          secondary: "#021117",
-
-          accent: "#1598d1",
-
-          neutral: "#2a323c",
-
-          "base-100": "#1d232a",
-
-          info: "#3abff8",
-
-          success: "#36d399",
-
-          warning: "#fbbd23",
-
-          error: "#f87272",
-        },
-      },
-    ],
-  },
+  colors: {
+    'text': '#fef9ec',
+    'background': '#0f0f0f',
+    'primary': '#1dff00',
+    'secondary': '#fa00ff',
+    'accent': '#00cbff',
+   },
+  plugins: [
+    require("tailwindcss-border-gradient-radius"),
+    nextui({
+      themes:{
+        dark:{
+          colors:{
+            primary:"#1dff00",
+            secondary:'#fa00ff',
+            accent:'#00cbff'
+          }
+        }
+      }
+    })
+      
+  ],
+  darkMode: "class",
 };

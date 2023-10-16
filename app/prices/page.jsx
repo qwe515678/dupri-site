@@ -35,10 +35,9 @@ const data = [{
 export default function Page() {
   const cards = data.map((item) => (
     // <motion.li key={item.name} className='border border-stone-700 rounded h-full  w-full box-border min-h-[50vh] min-w-[20vw] p-3 m-3 relative shadow-sm shadow-stone-600' style={{background: item.bg}} >
-    <motion.li key={item.name} className={`border-2 border-[#515252] rounded-lg h  w-full box-border h-full min-h-[50vh] max-h-56  min-w-[20vw] max-w-[30vw] xl:max-w-none p-5 m-3 relative shadow-sm shadow-stone-200 hover:-translate-y-2 transition-transform duration-300 ${item.id === 2 ? `border-gradient-br-red-purple-gray-900 border-transparent border-solid border-2 scale-110 xl:scale-100` : ``}`}  >
+    <motion.li key={item.name} className={`border-2 border-primary rounded-lg h  w-full box-border h-full min-h-[50vh] max-h-56  min-w-[20vw] max-w-[30vw] xl:max-w-none p-5 m-3 relative hover:-translate-y-2 transition-transform duration-300 ${item.id === 2 ? `border-primary border-solid border-2 scale-110 xl:scale-100 shadow-2xl shadow-[#041f00]` : ``}`}  >
       {item.id === 2 ? (
-        // <p className={`w-full text-center uppercase font-bold`}><LinearGradient gradient={['to left','#4693d4, #d18eed']} fallbackColor="white">{item.name}</LinearGradient></p>
-        <p className={`w-full text-center bg-clip-text text-transparent  uppercase font-bold bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400`}>{item.name}</p>
+        <p className={`w-full text-center bg-clip-text text-transparent  uppercase font-bold bg-gradient-to-r from-accent to-primary`}>{item.name}</p>
       ) : (
         <p className={`w-full text-center uppercase font-bold`}>{item.name}</p>
       )}

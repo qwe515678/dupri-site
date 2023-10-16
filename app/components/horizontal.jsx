@@ -80,13 +80,11 @@ const HorizontalScrollCarousel = () => {
 
 const Stat = ({ number, desc }) => {
   return (
-    <div className="stats  z-10 w-fit backdrop-blur-sm bg-[#222222] border border-[#3a3a3a]">
+    <div className="rounded-lg p-2 text-stone-200 z-10 w-fit backdrop-blur-sm bg-[#222222] border border-[#3a3a3a]">
 
-      <div className="stat ">
         <div className="stat-title text-2xl">Over</div>
-        <LinearGradient gradient={['to left', '#eeaeca ,#94bbe9']} className="stat-value font-mono">{number}</LinearGradient>
-        <p className="stat-desc text-xl whitespace-normal">{desc}</p>
-      </div>
+        <p className="stat-value font-mono text-primary text-3xl font-bold">{number}</p>
+        <p className=" text-xl text-stone-300 whitespace-normal">{desc}</p>
 
     </div>
   )
