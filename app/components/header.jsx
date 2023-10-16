@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { Navbar, NavbarBrand, DropdownMenu, DropdownItem, Dropdown, DropdownTrigger, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
-import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale } from "./Icons.jsx";
+import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale } from "./icons.jsx";
 import NextLink from 'next/link.js'
 import AnimatedLink from "./clientnavlink.jsx";
 
