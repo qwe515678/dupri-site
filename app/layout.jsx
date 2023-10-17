@@ -15,7 +15,7 @@ export const metadata = {
     siteName: 'Dupri.ru',
     images: [
       {
-        url: 'https://test.dupri.ru/og.png',
+        url: 'https://test.dupri.ru/og.jpg',
         width: 1000,
         height: 1000,
       },
