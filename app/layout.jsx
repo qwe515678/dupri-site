@@ -8,6 +8,22 @@ import Footer from './components/footer'
 export const metadata = {
   title: "Dupri | Home",
   description: "Homepage of Dupri Group",
+  openGraph: {
+    title: 'Dupri',
+    description: 'Dupri is one of the most importaint players on AI market',
+    url: 'https://test.dupri.ru',
+    siteName: 'Dupri.ru',
+    images: [
+      {
+        url: 'https://test.dupri.ru/og.png',
+        width: 1000,
+        height: 1000,
+      },
+
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
