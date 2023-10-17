@@ -51,7 +51,7 @@ export default function Home() {
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
 
-    {/* Header */}
+      {/* Header */}
       <section className="moving bg-main min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
 
         <Logo type='dragable' />
@@ -122,7 +122,7 @@ export default function Home() {
           href="https://dupri.ru"
           as={Link}
           showAnchorIcon
-          variant="solid"
+          variant='shadow'
           className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent'
         >
           Visit Dupri News
@@ -131,9 +131,7 @@ export default function Home() {
       {/* q&a */}
 
       <H2 h2Text='Still have questions?' />
-      <section>
-        <Accordeon data={data} />
-      </section>
+      <Accordeon data={data} />
 
     </motion.div>
   );

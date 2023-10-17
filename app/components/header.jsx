@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Navbar, NavbarBrand, DropdownMenu, DropdownItem, Dropdown, DropdownTrigger, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import { Navbar, NavbarBrand, DropdownMenu, DropdownItem, Dropdown, DropdownTrigger, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Chip } from "@nextui-org/react";
 import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale } from "./icons.jsx";
 import NextLink from 'next/link.js'
 import AnimatedLink from "./clientnavlink.jsx";
@@ -68,7 +68,7 @@ export default function App() {
                 <NavbarItem className="h-fit">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/about" className="h-fit font-bold" as={NextLink}>
+                        <Link color="foreground" href="/about" className="h-fit font-bold" as={NextLink} prefetch>
                             About Us
                         </Link>
                     </AnimatedLink>
@@ -76,7 +76,7 @@ export default function App() {
                 <NavbarItem className="-ml-3">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/prices" aria-current="page" className="h-fit font-bold" as={NextLink}>
+                        <Link color="foreground" href="/prices" aria-current="page" className="h-fit font-bold" as={NextLink} prefetch>
                             Prices
                         </Link>
                     </AnimatedLink>
@@ -84,7 +84,7 @@ export default function App() {
                 <NavbarItem className="-ml-3">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/products" className="h-fit font-bold" as={NextLink}>
+                        <Link color="foreground" href="/products" className="h-fit font-bold" as={NextLink} prefetch>
                             Products
                         </Link>
                     </AnimatedLink>
@@ -116,16 +116,16 @@ export default function App() {
                             description="We will be happy to hear your suggestions "
                         >
                             <p>Email</p>
-                            <a href="mailto:mail@htmlacademy.ru&body=Dear Dupri developers?subject=suggestion">mail@dupri.ru</a>
+                           <Chip variant="bordered" color="primary" className="my-2"> <a href="mailto:mail@htmlacademy.ru&body=Dear Dupri developers?subject=suggestion">mail@dupri.ru</a></Chip>
                         </DropdownItem>
                         <DropdownItem
                             key="Email"
                         >
                             <p>Socials</p>
                             <ul className="flex gap-2">
-                                <a href="">Telegram</a>
-                                <a href="">Vk</a>
-                                <a href="">Viber</a>
+                                <Chip variant="bordered" color="primary"><a href="">Telegram</a></Chip>
+                                <Chip variant="bordered" color="primary"><a href="">Vk</a></Chip>
+                                <Chip variant="bordered" color="primary"><a href="">Viber</a></Chip>
                             </ul>
                         </DropdownItem>
                         
