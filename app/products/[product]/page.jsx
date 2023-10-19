@@ -12,7 +12,7 @@ export default function Page({ params }) {
     const data = logos.find(obj => obj.tooltip.replace('-', ' ') === params.product.replace('-', ' '));
 
     return (
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className=" my-16">
+        <motion.div className=" my-16">
             <div className=" flex justify-center items-center relative md:static md:flex w-full gap-7 flex-col">
                 <Button color="primary" as={NextLink} href="/products" className="group absolute md:static left-0 top-0 bottom-0" variant="bordered" startContent={(
                     <AiOutlineArrowLeft className=" group-hover:-translate-x-1 duration-500 transition-all"/>

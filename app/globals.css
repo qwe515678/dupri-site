@@ -18,8 +18,8 @@
   src: url("/pop.woff2");
 }
 @font-face {
-  font-family: "Grid";
-  src: url("/Gridular-Regular.woff2");
+  font-family: "Plaster";
+  src: url("/plaster.woff2");
 }
 html {
   scroll-behavior: smooth; /* make sure the scroll is always in sync with the user's position */
@@ -89,4 +89,7 @@ div {
 }
 p > a {
   @apply text-blue-800 ;
+}
+.shadow{
+  box-shadow: 1px 0px 100px -11px rgba(71, 255, 0, 0.17);
 }

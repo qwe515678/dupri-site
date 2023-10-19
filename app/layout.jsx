@@ -1,7 +1,6 @@
 
 import "./globals.css";
-import Link from "next/link";
-import { Providers } from "./providers";
+import { ThemeProvider } from "./providers";
 import Header from './components/header'
 import { Toaster } from 'sonner'
 import Footer from './components/footer'
@@ -47,17 +46,18 @@ export default function RootLayout({ children }) {
     >
 
       <body className=" w-[97vw] mx-auto text-white">
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <ThemeProvider themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <main className="dark w-full h-full ">
-            <Toaster  theme="dark" richColors/>
+            <Toaster theme="dark" richColors />
             <Header />
-            <div className="dark xs:mx-0 w-[97vw] max-w-6xl mx-auto ">
+            <div className="dark xs:mx-0 w-[97vw] max-w-6xl mx-auto">
               {children}
             </div>
 
             <Footer />
           </main>
-        </Providers>
+        </ThemeProvider>
+
       </body>
     </html>
   );

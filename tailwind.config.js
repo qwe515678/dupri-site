@@ -15,7 +15,7 @@ module.exports = {
         mitrMed: "Mitr-medium",
         mitrReg: "Mitr-regular",
         mitrsSemi: "Mitr-semi",
-        grid: "Grid",
+        plaster: "Plaster",
       },
     },
     linearBorderGradients: {

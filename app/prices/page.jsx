@@ -58,7 +58,7 @@ export default function Page() {
     </motion.li>
   ))
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className=" h-screen flex flex-col items-center justify-center gap-5 box-border xl:my-96">
+    <motion.div className=" h-screen flex flex-col items-center justify-center gap-5 box-border xl:my-96">
       <h2 className=' text-6xl text-center my-3 mb-10 sm:mt-5'>Pricing</h2>
       <ul className='flex  items-center justify-center gap-5 xl:flex-wrap sm:flex-col xl:w-[80vw] xs:w-[98vw] mx-auto w-full'>{cards}</ul>
     </motion.div>

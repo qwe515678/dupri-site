@@ -11,8 +11,9 @@ const TypeItComponent = () => {
   return (
     <>
       <Button
-        className="w-full py-1 text-xl border border-gray-600 hover:bg-[#373737] max-w-2xl mx-auto my-2 rounded-xl text-center"
+        className="w-full py-1 text-xl  hover:bg-[#373737] max-w-2xl mx-auto my-2 rounded-xl text-center"
         onClick={() => setIsClicked(true)}
+        variant='ghost'
       >
         Ask DupriAI
       </Button>
@@ -20,7 +21,7 @@ const TypeItComponent = () => {
         <motion.div initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className='w-full max-w-2xl mx-auto my-2 '>
-          <Code className='w-full'>
+          <Code className='w-full p-3'>
             <div className=""><span> {">"} </span>What do you think of Dupri Group?</div>
             <span> {">"} </span>
             <TypeIt options={{

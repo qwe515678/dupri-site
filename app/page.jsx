@@ -1,7 +1,6 @@
 "use client";
 
 import HorizontalScrollCarousel from './components/horizontal'
-import { BsArrowRightSquare } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import Accordeon from "./components/accordeon";
 import TypeIt from "typeit-react";
@@ -49,7 +48,7 @@ export default function Home() {
   return (
     // hero
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div>
 
       {/* Header */}
       <section className="moving bg-main min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
@@ -123,7 +122,8 @@ export default function Home() {
           as={Link}
           showAnchorIcon
           variant='shadow'
-          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent'
+          color='primary'
+          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent shadow-2xl'
         >
           Visit Dupri News
         </Button>
@@ -134,5 +134,6 @@ export default function Home() {
       <Accordeon data={data} />
 
     </motion.div>
+    
   );
 }
