@@ -9,7 +9,7 @@ const logos = [
   },
   {
     path: "/logo-messanger.svg",
-    tooltip: "Dupri Messanger",
+    tooltip: "Dupri Messenger",
     modalDesc:
       "An artificial intelligence-enabled messaging app. Dupri Messenger allows you not only to communicate with friends, but also to receive smart recommendations, use a virtual assistant, make payments and much more.",
     modalImages: ["screen.jpg"],
@@ -40,7 +40,7 @@ const logos = [
   },
   {
     path: "/logo-ai.svg",
-    tooltip: "Dupri AI app",
+    tooltip: "Dupri AI",
     modalDesc:
       "The Dupri AI platform provides access to various services based on the company's artificial intelligence by subscription. Chatbots, speech and image recognition systems, recommendation services, automation tools and much more from DUPRI are available to you.",
     modalImages: ["screen.jpg"],

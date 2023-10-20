@@ -12,8 +12,8 @@ export default function Footer() {
             <div class="md:flex md:justify-between">
                 <div class="grid grid-cols-4 gap-8 sm:grid-cols-1 ">
                     <div class="mb-6 md:mb-0">
-                        <a href="https://flowbite.com/" class="flex items-start flex-col gap-4">
-                            <Image src={`logo.svg`} alt="logo" width={100} height={100} className="w-25 " />
+                        <a href="#" class="flex items-start flex-col gap-4">
+                            <Image src={`/logo.svg`} alt="logo" width={100} height={100} className="w-25 " />
                             <span class=" text-2xl font-semibold whitespace-nowrap dark:text-white">Dupri Group</span>
                         </a>
                     </div>
@@ -21,13 +21,13 @@ export default function Footer() {
                         <p class="mb-3 text-md font-semibold text-gray-900 uppercase dark:text-zinc-300">Navigation</p>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium text-sm">
                             <li class="mb-2">
-                                <a href="https://flowbite.com/" class="hover:underline">About Us</a>
+                                <a href="/" class="hover:underline">About Us</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://flowbite.com/" class="hover:underline">Products</a>
+                                <a href="/" class="hover:underline">Products</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://flowbite.com/" class="hover:underline">Pricing</a>
+                                <a href="/" class="hover:underline">Pricing</a>
                             </li>
                             
                         </ul>
