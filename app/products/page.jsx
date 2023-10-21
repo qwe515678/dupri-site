@@ -12,7 +12,7 @@ import P from "../components/P";
 
 export default function Page() {
   return (
-    <motion.div className=" my-16">
+    <motion.div className=" my-16 sm:mb-52 sm:mt-20">
       <h2 className="my-auto text-6xl text-center"> Here are all of our products</h2>
       <ul className="mt-5 ">
         {logos.map((obj) => (
@@ -65,11 +65,11 @@ function LiImage({ obj }) {
           </div>
         </>
       ) : (
-        <div className="my-20 py-2">
+        <div className="my-20 sm:my-52 py-2">
           <TextStroke baseVelocity={3}>dupri group</TextStroke>
           <TextStroke baseVelocity={-3}>{obj.tooltip}</TextStroke>
 
-          <Card className="mt-5 h-full box-border">
+          <Card className="mt-5  h-full box-border">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start ">
               <p className="font-bold mb-4 text-6xl">{obj.tooltip}</p>
               <p>{obj.fullDesc}</p>
