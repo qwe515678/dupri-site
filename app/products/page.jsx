@@ -1,15 +1,14 @@
 
 'use client'
-import { Image, Button, Chip, Spacer, Link, Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+import { Image, Button, Chip, Card, CardHeader, CardBody  } from "@nextui-org/react";
 import NextLink from 'next/link'
 import TextStroke from '../components/text-stroke'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import NextImage from 'next/image'
 import { motion } from 'framer-motion'
 import logos from '../components/logoinfo'
-import { useRef } from "react";
+import React, { useRef } from "react";
 import P from "../components/P";
-import AnimText from "../components/animtext";
 
 export default function Page() {
   return (
@@ -24,7 +23,11 @@ export default function Page() {
   )
 }
 function LiImage({ obj }) {
-  const width = window.innerWidth
+  const [width, setWidth] = React.useState(0)
+  React.useEffect(()=>{
+    const newWidth = window.innerWidth
+    setWidth(newWidth)
+  }, []) 
   const ref = useRef()
   return (
     <motion.li key={obj.tooltip} className="h-screen mt-20 box-border" ref={ref} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>

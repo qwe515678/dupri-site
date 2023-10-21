@@ -2,7 +2,6 @@
 import "./globals.css";
 import { ThemeProvider } from "./providers";
 import Header from './components/header'
-import { Toaster } from 'sonner'
 import Footer from './components/footer'
 export const metadata = {
   title: "Dupri | Home",
@@ -48,7 +47,6 @@ export default function RootLayout({ children }) {
       <body className=" w-[97vw] mx-auto text-white">
         <ThemeProvider themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <main className="dark w-full h-full ">
-            <Toaster theme="dark" richColors />
             <Header />
             <div className="dark xs:mx-0 w-[97vw] max-w-6xl mx-auto">
               {children}

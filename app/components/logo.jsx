@@ -2,7 +2,6 @@
 import NextImage from "next/image"
 import NextLink from 'next/link'
 import { Tooltip, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Image, } from "@nextui-org/react"
-import { toast } from 'sonner'
 import logos from './logoinfo'
 function Logo({ item }) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -43,7 +42,6 @@ function Logo({ item }) {
     )
 }
 export default function Logos() {
-    const notify = () => toast('This app is stil in developement');
     const infoList = logos.map(
         item =>
             <>
