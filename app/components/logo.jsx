@@ -25,7 +25,7 @@ function Logo({ item }) {
                             <ModalHeader className="flex flex-col gap-1">{item.tooltip}</ModalHeader>
                             <ModalBody>
                                 <Image as={NextImage} width={1000} height={1000} alt="" src={`/${item.modalImages[0]}`}></Image>
-                                <p>{item.modalDesc}</p>
+                                <p>{item.shortDesc}</p>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="bordered" onPress={onClose}>
@@ -48,7 +48,6 @@ export default function Logos() {
         item =>
             <>
                 <Logo item={item} />
-
             </>
 
 

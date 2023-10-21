@@ -91,7 +91,7 @@ export default function Page() {
             </div>
 
           ))}
-          <Tooltip content={
+          <Tooltip showArrow content={
             <div className="px-1 py-2">
               <div className=" font-bold">Do you want to know what was next?</div>
               <Link className="cursor-pointer">Join Our Team!</Link>

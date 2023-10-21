@@ -129,14 +129,14 @@ export default function Home() {
         </form> */}
         {/* <div className="divider">OR</div> */}
 
-        <p>Check out our new web app, all posts there are written only by a neural network, this is the first neural network of this kind in the world</p>
+        <P>Check out our new web app, all posts there are written only by a neural network, this is the first neural network of this kind in the world</P>
         <Button
           href="https://dupri.ru"
           as={Link}
           showAnchorIcon
           variant='shadow'
           color='primary'
-          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent shadow-2xl'
+          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent shadow-2xl my-2'
         >
           Visit Dupri News
         </Button>
