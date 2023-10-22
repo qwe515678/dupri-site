@@ -32,7 +32,7 @@ export default function Page({ params }) {
 
                 <Image className=" mx-auto -z-10" as={NextImage} src={`/${data.modalImages[0]}`} alt={`Photo of ${data.tooltip}}`} width={1000} height={1000} />
             </div>
-            <motion.div style={{ y: y2 }} className="z-10 absolute right-10 sm:hidden ">
+            <motion.div style={{ y: y2 }} className="z-10 absolute right-10 sm:hidden pointer-events-none">
 
                 <Image className={`stroke-white w-40 lg:w-30 md:w-25 sm:w-20 mx-auto `} as={NextImage} src={`/logos/${data.path}`} alt={`Logo of ${data.tooltip}}`} width={1000} height={1000} />
             </motion.div>

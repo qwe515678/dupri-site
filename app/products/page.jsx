@@ -57,9 +57,9 @@ function LiImage({ obj }) {
                 ))}
               </ul>
 
-              <Button as={NextLink} className='group/btn my-10 w-full' color="background" variant='ghost' href={`/products/${obj.tooltip.replace(/ /g, '-')}`} endContent={(
+              <Button as={NextLink} className='group/btn my-10 w-full border-dashed bg-[rgba(0,0,0,0.32)] backdrop-blur-sm' color="primary" variant='bordered' href={`/products/${obj.tooltip.replace(/ /g, '-')}`} endContent={(
                 <AiOutlineArrowLeft className="rotate-180 group-hover/btn:translate-x-2 duration-500 transition-all" />
-              )}>Learn More About {width} <span className=" text-primary text-md font-poppins">{obj.tooltip}</span></Button>
+              )}>Learn More About <span className=" text-seconary font-bold text-md font-poppins">{obj.tooltip}</span></Button>
 
             </div>
           </div>

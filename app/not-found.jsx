@@ -41,7 +41,7 @@ export default function NotFound() {
             <h2>Noting Here</h2>
 
 
-            <Button href="/" as={NextLink} color='primary' variant='bordered'>Go back Home</Button>
+            <Button href="/" as={NextLink} color='primary' variant='bordered' className=' border-dashed'>Go back Home</Button>
         </div>
     )
 }
