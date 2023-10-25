@@ -4,12 +4,14 @@ import React, { useState } from 'react';
 import TypeIt from "typeit-react";
 import { motion } from 'framer-motion'
 import { Button, Code } from '@nextui-org/react';
+import AnimText from './animtext';
 
 const TypeItComponent = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
+    
       <Button
         className="w-full py-1 text-xl  hover:bg-[#373737] max-w-2xl mx-auto my-2 rounded-xl text-center"
         onClick={() => setIsClicked(true)}

@@ -93,3 +93,16 @@ p > a {
 .shadow{
   box-shadow: 1px 0px 100px -11px rgba(71, 255, 0, 0.17);
 }
+.levitating{
+  animation: 3s ease-in-out 1s infinite alternate levitatin;
+  
+}
+@keyframes levitatin {
+  from {
+    transform: translateY(5px);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}

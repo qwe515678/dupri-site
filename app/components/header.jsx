@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Navbar, NavbarBrand, DropdownMenu, DropdownItem, Dropdown, DropdownTrigger, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Chip } from "@nextui-org/react";
+import { Navbar, NavbarBrand, DropdownMenu, DropdownItem, Dropdown, DropdownTrigger, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Chip, Divider } from "@nextui-org/react";
 import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale } from "./icons.jsx";
 import NextLink from 'next/link.js'
 import AnimatedLink from "./clientnavlink.jsx";
@@ -9,10 +9,10 @@ export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     const links = [
-        { name: "Home", id: 1, lowerName:'' },
-        { name: "About", id: 2, lowerName:'about' },
-        { name: "Products", id: 3, lowerName:'products' },
-        { name: "Prices", id: 2, lowerName:'prices' },
+        { name: "Home", id: 1, lowerName: '' },
+        { name: "About", id: 2, lowerName: 'about' },
+        { name: "Products", id: 3, lowerName: 'products' },
+        { name: "Prices", id: 2, lowerName: 'prices' },
     ];
     const icons = {
         chevron: <ChevronDown fill="currentColor" size={16} />,
@@ -68,7 +68,7 @@ export default function App() {
                 <NavbarItem className="h-fit">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/about" className="h-fit font-bold" as={NextLink} prefetch>
+                        <Link prefetch color="foreground" href="/about" className="h-fit font-bold" as={NextLink}>
                             About Us
                         </Link>
                     </AnimatedLink>
@@ -76,7 +76,7 @@ export default function App() {
                 <NavbarItem className="-ml-3">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/prices" aria-current="page" className="h-fit font-bold" as={NextLink} prefetch>
+                        <Link prefetch color="foreground" href="/prices" aria-current="page" className="h-fit font-bold" as={NextLink}>
                             Prices
                         </Link>
                     </AnimatedLink>
@@ -84,7 +84,7 @@ export default function App() {
                 <NavbarItem className="-ml-3">
                     <AnimatedLink>
 
-                        <Link color="foreground" href="/products" className="h-fit font-bold" as={NextLink} prefetch>
+                        <Link prefetch color="foreground" href="/products" className="h-fit font-bold" as={NextLink}>
                             Products
                         </Link>
                     </AnimatedLink>
@@ -116,19 +116,20 @@ export default function App() {
                             description="We will be happy to hear your suggestions "
                         >
                             <p>Email</p>
-                           <Chip variant="bordered" color="primary" className="my-2"> <a href="mailto:mail@htmlacademy.ru&body=Dear Dupri developers?subject=suggestion">mail@dupri.ru</a></Chip>
+                            <Chip variant="flat" color="primary" className="my-2"> <a href="mailto:mail@htmlacademy.ru&body=Dear Dupri developers?subject=suggestion">mail@dupri.ru</a></Chip>
                         </DropdownItem>
+                       
                         <DropdownItem
                             key="Email"
                         >
                             <p>Socials</p>
                             <ul className="flex gap-2">
-                                <Chip variant="bordered" color="primary"><a href="">Telegram</a></Chip>
-                                <Chip variant="bordered" color="primary"><a href="">Vk</a></Chip>
-                                <Chip variant="bordered" color="primary"><a href="">Viber</a></Chip>
+                                <Chip variant="flat" color="primary"><a href="">Telegram</a></Chip>
+                                <Chip variant="flat" color="primary"><a href="">Vk</a></Chip>
+                                <Chip variant="flat" color="primary"><a href="">Viber</a></Chip>
                             </ul>
                         </DropdownItem>
-                        
+
 
                     </DropdownMenu>
                 </Dropdown>
@@ -152,7 +153,7 @@ export default function App() {
                             className="w-full text-4xl "
                             href={`/${item.lowerName}`}
                             size="xl"
-                           
+
                         >
                             {item.name}
                         </Link>

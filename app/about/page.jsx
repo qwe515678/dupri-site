@@ -4,6 +4,8 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useState } from "react"
 import H2 from '../components/H2'
+import P from "../components/P"
+import { Link, Tooltip } from "@nextui-org/react"
 
 const data = [
   {
@@ -58,7 +60,7 @@ export default function Page() {
       <section className=" border-none rounded-t-none">
 
         <H2 h2Text={`About us`}></H2>
-        <p>DUPRI is a leading AI/automation company founded in 2010 by Russian graduates. Over the past decade, it has grown into a major global tech player. DUPRI's products help automate tasks, generate content, communicate with customers, and more using innovative AI and talented developers.
+        <P>DUPRI is a leading AI/automation company founded in 2010 by Russian graduates. Over the past decade, it has grown into a major global tech player. DUPRI's products help automate tasks, generate content, communicate with customers, and more using innovative AI and talented developers.
 
           {opened ? (
             <span className="ml-1">DUPRI products help automate everyday tasks, generate useful content, maintain communication with customers, and much more.
@@ -68,7 +70,7 @@ export default function Page() {
             <button className=" text-blue-600 ml-1" onClick={() => setOpened(true)}> More</button>
           )}
 
-        </p>
+        </P>
 
       </section>
 
@@ -81,7 +83,7 @@ export default function Page() {
 
 
 
-              <motion.div className="timeline-content" initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ type: 'spring' }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ type: 'spring' }} viewport={{ once: true }}>
                 <p className="font-bold text-blue-700">{event.year}</p>
                 <p className="text-gray-400">{event.event}</p>
               </motion.div>
@@ -89,7 +91,15 @@ export default function Page() {
             </div>
 
           ))}
+          <Tooltip showArrow content={
+            <div className="px-1 py-2">
+              <div className=" font-bold">Do you want to know what was next?</div>
+              <Link className="cursor-pointer">Join Our Team!</Link>
+            </div>
+          }>
 
+            <div className="text-center text-2xl w-fit mx-auto cursor-pointer m-10">???</div>
+          </Tooltip>
         </div>
       </div>
 

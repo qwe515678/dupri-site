@@ -6,10 +6,12 @@ import Accordeon from "./components/accordeon";
 import TypeIt from "typeit-react";
 import Logo from './components/main-logo'
 import AiText from './components/typed-text-by-ai'
+
 import Logos from './components/logo'
 import H2 from './components/H2'
 import { Link, Button } from "@nextui-org/react";
-import AnimatedText from './components/animatedchar';
+import P from './components/P';
+import AnimText from './components/animtext';
 export default function Home() {
   const data = [
     {
@@ -48,7 +50,7 @@ export default function Home() {
   return (
     // hero
     // <Image src={`/bg.svg`} height={1} width={2} className="w-[200vw] absolute z-0 moving"/>
-      <motion.div>
+    <motion.div>
 
       {/* Header */}
       <section className="moving bg-main min-h-screen flex flex-col items-center justify-center bg-fixed" id="hero">
@@ -77,23 +79,34 @@ export default function Home() {
 
       <H2 h2Text='About Us' />
 
-      <section className="flex md:flex-col">
+      <section className="flex flex-col">
 
-        {/* <Sidebar/> */}
         <div className=" my-3 p-4">
 
-          <p className=""><span className=" font-mitrMed">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:</p>
+          <P>
+            <span className=" font-mitrMed">DUPRI</span>  - one of the largest players on AI market right now. We create content for millions. We also have a lot of little apps, that make your life easier. Here are some of them:
+
+          </P>
+          <AnimText>
+
           <Logos />
+          </AnimText>
         </div>
 
       </section>
       <H2 h2Text='WHY SHOULD YOU CHOSE US' />
       <section className="  justify-center items-center gap-3 ">
         {/* <Image src={`/times.jpg`} width={1000} height={1000} alt="photo from time journal" className="float-left w-[30%] max-w-xl rounded-sm" /> */}
+        <AnimText notLift={true}>
+
         <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75 my-3"></div>
+        </AnimText>
+        <AnimText>
+
         <p >
           This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
         </p>
+        </AnimText>
 
       </section>
       <section className="w-full flex items-center flex-col">
@@ -116,14 +129,14 @@ export default function Home() {
         </form> */}
         {/* <div className="divider">OR</div> */}
 
-        <p>Check out our new web app, all posts there are written only by a neural network, this is the first neural network of this kind in the world</p>
+        <P>Check out our new web app, all posts there are written only by a neural network, this is the first neural network of this kind in the world</P>
         <Button
           href="https://dupri.ru"
           as={Link}
           showAnchorIcon
           variant='shadow'
           color='primary'
-          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent shadow-2xl'
+          className='w-full text-stone-800 font-bold bg-gradient-to-r from-primary to-accent shadow-2xl my-2'
         >
           Visit Dupri News
         </Button>
@@ -134,6 +147,6 @@ export default function Home() {
       <Accordeon data={data} />
 
     </motion.div>
-    
+
   );
 }

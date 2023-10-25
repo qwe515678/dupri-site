@@ -2,7 +2,6 @@
 import NextImage from "next/image"
 import NextLink from 'next/link'
 import { Tooltip, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Image, } from "@nextui-org/react"
-import { toast } from 'sonner'
 import logos from './logoinfo'
 function Logo({ item }) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -25,7 +24,7 @@ function Logo({ item }) {
                             <ModalHeader className="flex flex-col gap-1">{item.tooltip}</ModalHeader>
                             <ModalBody>
                                 <Image as={NextImage} width={1000} height={1000} alt="" src={`/${item.modalImages[0]}`}></Image>
-                                <p>{item.modalDesc}</p>
+                                <p>{item.shortDesc}</p>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="bordered" onPress={onClose}>
@@ -43,12 +42,10 @@ function Logo({ item }) {
     )
 }
 export default function Logos() {
-    const notify = () => toast('This app is stil in developement');
     const infoList = logos.map(
         item =>
             <>
                 <Logo item={item} />
-
             </>
 
 
