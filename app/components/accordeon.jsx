@@ -67,7 +67,7 @@ function AccordionPanel({ children }) {
           whileInView={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", duration: 0.4, bounce: 0.3 }}
+          transition={{ duration: 0.4, bounce: 0.3 }}
         >
           <div className="p-5">{children}</div>
         </motion.div>

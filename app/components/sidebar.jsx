@@ -57,7 +57,7 @@ export default function Sidebar() {
                             width: 300,
                             transition: {
                                 delay: 0.1,
-                                type:'spring'
+                                type: 'spring'
                             }
                         }}
                         exit={{

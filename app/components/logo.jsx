@@ -22,15 +22,15 @@ function Logo({ item }) {
                     {(onClose) => (
                         <>
                             <ModalHeader className="flex flex-col gap-1">{item.tooltip}</ModalHeader>
-                            <ModalBody>
-                                <Image as={NextImage} width={1000} height={1000} alt="" src={`/${item.modalImages[0]}`}></Image>
+                            <ModalBody className="overflow-visible">
+                                <Image as={NextImage} width={1000} height={1000} alt="" src={`/${item.modalImages[0]}`} className=' overflow-visible'></Image>
                                 <p>{item.shortDesc}</p>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="bordered" onPress={onClose}>
                                     Close
                                 </Button>
-                                <Button color="primary" variant="bordered" as={NextLink} href={`/products/${item.tooltip.replace(/ /g, '-')}`}> 
+                                <Button color="primary" variant="bordered" as={NextLink} href={`/products/${item.tooltip.replace(/ /g, '-')}`}>
                                     Learn More
                                 </Button>
                             </ModalFooter>

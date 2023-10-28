@@ -8,8 +8,8 @@ export default function AnimatedLink({ children }) {
     return <motion.div initial={{ background: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0))", color: 'white' }}
         whileHover={{
             background:
-                " linear-gradient(83deg, #00BB34, #0096B7)",
-                
+                "linear-gradient(18deg, rgba(0,0,0,0) 0%, rgba(38,38,38,0.2) 100%)",
+
         }}
         transition={{ duration: 0.4, }}
         className=" rounded-xl px-2 py-1 group flex "

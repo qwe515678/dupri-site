@@ -42,8 +42,8 @@ export default function Page() {
 
       <div style={{ y: waveScroll }} className="moving bg-about h-screen text-stone-800 flex justify-center items-center flex-col gap-10 w-full">
         {/* <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2  bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300 via-purple-300 to-indigo-400 bg-clip-text text-transparent">Entertainment meets the internet.</h2> */}
-        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2 text-slate-300 z-10 mix-blend-difference">Entertainment meets the internet.</h2>
-        <p className="w-full p-5 text-slate-300 z-10 mix-blend-difference">We create technologies that bring people together. </p>
+        <h2 className="text-8xl xl:text-6xl sm:text-5xl xs:text-3xl mx-2 text-slate-300 z-10 mix-blend-difference font-poppins font-bold">Entertainment meets the internet.</h2>
+        <p className="w-full p-5 text-slate-300 z-10 mix-blend-difference">- We create technologies that bring people together. </p>
 
       </div>
       <svg className="sticky bottom-0 mt-auto w-full h-fit z-0" width="900" height="226" viewBox="0 0 900 226" fill="none" xmlns="http://www.w3.org/2000/svg">

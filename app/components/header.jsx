@@ -118,7 +118,7 @@ export default function App() {
                             <p>Email</p>
                             <Chip variant="flat" color="primary" className="my-2"> <a href="mailto:mail@htmlacademy.ru&body=Dear Dupri developers?subject=suggestion">mail@dupri.ru</a></Chip>
                         </DropdownItem>
-                       
+
                         <DropdownItem
                             key="Email"
                         >

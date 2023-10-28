@@ -8,7 +8,9 @@ import { BsTelegram } from 'react-icons/bs'
 
 export default function Footer() {
     return (
-        <footer class="border-stone-700 xs:mx-0 w-[97vw] max-w-6xl mx-auto my-2 text-center border-t  pt-10">
+        <div className="z-40 bg-background relative">
+
+        <footer class="border-stone-700 xs:mx-0 w-[97vw] max-w-6xl mx-auto my-2 text-center border-t  pt-10 ">
             <div class="md:flex md:justify-between">
                 <div class="grid grid-cols-4 gap-8 sm:grid-cols-1 ">
                     <div class="mb-6 md:mb-0">
@@ -29,7 +31,7 @@ export default function Footer() {
                             <li class="mb-2">
                                 <a href="/" class="hover:underline">Pricing</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                     <div className="text-left">
@@ -76,5 +78,6 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
+        </div>
     )
 }

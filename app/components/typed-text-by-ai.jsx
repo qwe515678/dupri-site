@@ -11,7 +11,7 @@ const TypeItComponent = () => {
 
   return (
     <>
-    
+
       <Button
         className="w-full py-1 text-xl  hover:bg-[#373737] max-w-2xl mx-auto my-2 rounded-xl text-center"
         onClick={() => setIsClicked(true)}

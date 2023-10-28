@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/components/use-dimesions.js"  ],
+, "app/components/use-dimesions.js", "app/components/bg-404.jsx"  ],
   "exclude": [
     "node_modules"
   ]

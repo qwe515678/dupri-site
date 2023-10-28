@@ -37,7 +37,7 @@ export default function Page({ params }) {
                 <Image className={`stroke-white w-40 lg:w-30 md:w-25 sm:w-20 mx-auto `} as={NextImage} src={`/logos/${data.path}`} alt={`Logo of ${data.tooltip}}`} width={1000} height={1000} />
             </motion.div>
             <div className="z-0 bg-blend-multiply ">
-            <P>{data.largeDesc}</P>
+                <P>{data.largeDesc}</P>
 
             </div>
             {data.ready ? (

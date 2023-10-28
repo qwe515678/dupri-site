@@ -44,18 +44,18 @@ h2 {
 
 .moving {
   /* background-image: url("/bg.svg"); */
-  
+
   background-repeat: repeat;
   animation: moveBackground 100s linear infinite;
 }
-.bg-main{
+.bg-main {
   background-image: url("/Group 50.svg");
 }
-.bg-about{
-  background-image:url('/aboutbg.svg');
+.bg-about {
+  background-image: url("/aboutbg.svg");
 }
-.bg-prices{
-  background-image:url('/bg-prices.svg');
+.bg-prices {
+  background-image: url("/bg-prices.svg");
 }
 @keyframes moveBackground {
   from {
@@ -88,14 +88,13 @@ div {
   @apply text-xl font-mitrReg tracking-widest;
 }
 p > a {
-  @apply text-blue-800 ;
+  @apply text-blue-800;
 }
-.shadow{
+.shadow {
   box-shadow: 1px 0px 100px -11px rgba(71, 255, 0, 0.17);
 }
-.levitating{
+.levitating {
   animation: 3s ease-in-out 1s infinite alternate levitatin;
-  
 }
 @keyframes levitatin {
   from {

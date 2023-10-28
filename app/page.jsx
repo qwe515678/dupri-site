@@ -89,7 +89,7 @@ export default function Home() {
           </P>
           <AnimText>
 
-          <Logos />
+            <Logos />
           </AnimText>
         </div>
 
@@ -99,13 +99,13 @@ export default function Home() {
         {/* <Image src={`/times.jpg`} width={1000} height={1000} alt="photo from time journal" className="float-left w-[30%] max-w-xl rounded-sm" /> */}
         <AnimText notLift={true}>
 
-        <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75 my-3"></div>
+          <div className=" bg-[url('/times.jpg')] w-full h-96 bg-cover bg-fixed contrast-75 my-3"></div>
         </AnimText>
         <AnimText>
 
-        <p >
-          This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
-        </p>
+          <p >
+            This is a publication of the esteemed Time Magazine, which elucidates upon one hundred prominent individuals in the AI market. Remarkably, a notable thirty percent of them are affiliated with the esteemed Dupri Group. This affirms the magnitude of our influential prowess in the sphere of Artificial Intelligence development.
+          </p>
         </AnimText>
 
       </section>
