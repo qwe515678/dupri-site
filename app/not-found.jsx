@@ -1,14 +1,14 @@
 'use client'
 import { Button } from '@nextui-org/react'
 import NextLink from 'next/link'
-import FallingDottedLine from './components/bg-404'
+// import FallingDottedLine from './components/bg-404'
 
 export default function NotFound() {
     return (
         <div className='h-screen  box-border p-10 flex flex-col items-center justify-center gap-7 w-full'>
-            {Array(100).fill(0).map((item, i) => {
+            {/* {Array(100).fill(0).map((item, i) => {
                 return <FallingDottedLine key={i} />
-            })}
+            })} */}
             <svg className='w-1/4 lg:w-1/3 md:w-1/2 h-fit levitating' width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M0 466.4C0 82.3196 82.3196 0 466.4 0H533.6C917.68 0 1000 82.3196 1000 466.4V533.6C1000 917.68 917.68 1000 533.6 1000H466.4C82.3196 1000 0 917.68 0 533.6V466.4Z"
