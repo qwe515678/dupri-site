@@ -1,6 +1,6 @@
 # Dupri Site
 
-This is a Next.js project bootstrapped with `create-next-app`. The main purpose of this project is to create a modern, performant, and scalable website of Dupri inc.
+This is a Next.js project bootstrapped with `create-next-app`. The main purpose of this project is to create a modern, performant, and scalable website of Dupri inc. 
 
 ## Link
 

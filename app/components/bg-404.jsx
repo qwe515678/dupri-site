@@ -3,12 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const FallingDottedLine = () => {
-
     const lineDuration = Math.random() * 15 + 10
     const isServer = typeof window === 'undefined'
-
     const [width, setWidth] = React.useState(!isServer ? window.innerWidth : 0)
-
     const [xPos, setXPos] = useState(!isServer ? Math.random() * width : 0);
 
     // setWidth(window.innerWidth)
@@ -45,4 +42,5 @@ const FallingDottedLine = () => {
         </motion.div>
     );
 }
+
 export default FallingDottedLine
