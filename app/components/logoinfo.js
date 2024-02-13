@@ -53,7 +53,8 @@ const logos = [
     shortDesc: "Online store with personal recommendations.",
     fullDesc:
       "Dupri Shop is a new generation online store that uses artificial intelligence technologies to offer each customer unique personalized product recommendations based on their previous activity, preferences and purchases.",
-    ready: false,
+    ready: true,
+    link: "https://store.dupri.ru"
   },
   {
     path: "/logo-ai.svg",
@@ -74,6 +75,8 @@ const logos = [
     fullDesc:
       "Dupri AI provides developers with API access to advanced machine learning algorithms from DUPRI, such as computer vision, natural language processing, speech recognition and synthesis, recommendation systems, and others.",
     ready: false,
+    ready: true,
+    link: "https://ai.dupri.ru"
   },
   {
     path: "/logo-platform.svg",
